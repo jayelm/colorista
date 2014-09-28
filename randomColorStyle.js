@@ -10,7 +10,7 @@
 
         var c;
         if (colors.length === 0) // Default to completely random
-            c = '#'+Math.floor(Math.random()*16777215).toString(16);
+            c = '#'+Math.random().toString(16).substr(-6);
         else
             c = colors[Math.floor(colors.length * Math.random())];
 
