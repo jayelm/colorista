@@ -1,4 +1,5 @@
 ;(function () {
+    'use strict';
 
     var randomColorStyle = function(colors, spec) {
         if (!(colors instanceof Array))
@@ -7,6 +8,7 @@
         if (spec === null || typeof spec !== 'object')
             throw 'spec is not an Object';
 
+        var c;
         if (colors.length === 0) // Default to completely random
             c = '#'+Math.floor(Math.random()*16777215).toString(16);
         else
@@ -14,10 +16,10 @@
 
         for (var selector in spec) {
             if (spec.hasOwnProperty(selector)) {
-                elements = document.querySelectorAll(selector);
-                properties = spec[selector];
+                var elements = document.querySelectorAll(selector);
+                var properties = spec[selector];
                 for (var i = 0; i < elements.length; i++) {
-                    e = elements[i];
+                    var e = elements[i];
                     for (var j = 0; j < properties.length; j++) {
                         e.style[properties[j]] = c;
                     }
