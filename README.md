@@ -1,6 +1,7 @@
 # randomColorStyle
 
-A tiny script to randomly change the color of HTML elements.
+A tiny script to randomly change the color of HTML elements on page load.  Add
+some spontaneity to you and your website's life.
 
 ## Usage
 
@@ -34,6 +35,9 @@ is important that the actual function `randomColorStyle()` be called either
 after jQuery's `$(document).ready` or at the end of the HTML file, when
 everything has loaded; otherwise, the script won't find any HTML elements to
 change!
+
+It's also possible, of course, to programmatically call the function multiple
+times.
 
 ## Bugs, Contributing, Etc.
 
