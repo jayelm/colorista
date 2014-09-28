@@ -1,4 +1,4 @@
 randomColorStyle
 ================
 
-Randomize CSS color styles using JavaScript.
+Randomly change the color of HTML elements.
