@@ -26,6 +26,8 @@
                 }
             }
         }
+
+        return c;
     };
 
     if (this.randomColorStyle) throw 'already defined';

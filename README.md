@@ -29,6 +29,9 @@ some spontaneity to you and your website's life.
     The Array must be comprised of valid CSS properties, and will overwrite
     those properties.
 
+    The function returns the randomly selected color chosen as a String, which
+    can be useful if you intend to use it further.
+
 ### Placement
 
 Load `randomColorStyle.js` anywhere in the HTML, (or just copy+paste), but it
