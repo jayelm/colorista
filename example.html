@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <head>
-  <script src="randomColorStyle.js"></script>
+  <script src="colorista.js"></script>
 </head>
 
 <body>
   I'm red, green, or blue!
   <div style="width: 100px; height: 100px" id="completelyRandom">I'm completely random!</div>
   <script>
-    randomColorStyle(['red', 'green', 'blue'], {
+    colorista(['red', 'green', 'blue'], {
       'body': ['background-color']
     });
-    randomColorStyle([], {
+    colorista([], {
       '#completelyRandom': ['background-color']
     });
   </script>

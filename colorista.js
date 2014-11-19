@@ -1,7 +1,7 @@
 ;(function () {
     'use strict';
 
-    var randomColorStyle = function(colors, spec) {
+    var colorista = function(colors, spec) {
         if (!(colors instanceof Array))
             throw 'colors must be an Array';
 
@@ -30,7 +30,7 @@
         return c;
     };
 
-    if (this.randomColorStyle) throw 'already defined';
-    this.randomColorStyle = randomColorStyle;
+    if (this.colorista) throw 'already defined';
+    this.colorista = colorista;
 
 }).call(this);

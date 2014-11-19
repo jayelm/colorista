@@ -1,19 +1,18 @@
-# randomColorStyle
+# Colorista
 
-A tiny script to randomly change the color of HTML elements on page load.  Add
-some spontaneity to you and your website's life.
+A tiny script to easily and programmatically change HTML element colors *en
+masse*. Also supports random color choices. Add some spontaneity to you and
+your website's life.
 
 ## Usage
 
 ...is very, very simple:
 
-    randomColorStyle(colors, spec)
+    colorista(colors, spec)
 
- - `colors` is an Array of valid css colors (hex codes, rgba, known colors,
-     etc.). Specify your own, or programmatically
-     choose some: [randomColor](https://github.com/davidmerfield/randomColor)
-     (of which the name of this script is inspired) plays nicely. If left
-     blank, `colors` will default to a completely random rgb selection.
+ - `colors` is an *Array* of valid css colors (hex codes, rgba, known colors,
+     etc.). If given more than one color, a random color will be chosen. If
+     given an empty Array, a completely random rgb color will be chosen.
  - `spec` is an Object consisting of selector keys paired with values that are
      Arrays of properties. As an example:
 
@@ -29,23 +28,22 @@ some spontaneity to you and your website's life.
     The Array must be comprised of valid CSS properties, and will overwrite
     those properties.
 
-    The function returns the randomly selected color chosen as a String, which
-    can be useful if you intend to use it further.
+    The function returns the color chosen as a String, which can be useful if
+    you intend to use it further.
 
 ### Placement
 
-Load `randomColorStyle.js` anywhere in the HTML, (or just copy+paste), but it
-is important that the actual function `randomColorStyle()` be called either
-on jQuery's `$(document).ready` or at the end of the HTML file, when everything
-has loaded; otherwise, the script won't find any HTML elements to change!
+Load `colorista.js` anywhere in the HTML, (or just copy+paste), but it is
+important that the actual function `colorista()` be called either on document
+ready/load or at the end of the HTML file; otherwise, the script won't find any
+HTML elements to change!
 
-It's also possible, of course, to programmatically call the function multiple
-times, to change elements and properties independently with respect to the
-random color choice. A more concise way of doing this may be in the works.
+To change multiple colors at once, programmatically call the function multiple
+times. A more concise way of doing this may be in the works.
 
 ### Example
 
-    randomColorStyle(['red', 'green', 'blue'], {
+    colorista(['red', 'green', 'blue'], {
         'body': ['background-color']
     });
 
